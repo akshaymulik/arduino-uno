@@ -23,7 +23,7 @@ void loop() {
     if ( ! mfrc522.PICC_ReadCardSerial())
         return;
     // Show some details of the PICC (that is: the tag/card)
-    Serial.print("Card UID:");
+    // Serial.print("Card UID:");
     dump_byte_array(mfrc522.uid.uidByte, mfrc522.uid.size);
     Serial.println();//new-line
     delay(3000);
